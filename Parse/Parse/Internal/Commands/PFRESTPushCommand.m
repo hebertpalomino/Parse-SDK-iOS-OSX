@@ -53,9 +53,8 @@
 
     // TODO (nlutsenko): Probably we need an assert here, as there is no reason to send push without message
     if (state.payload) {
-        NSDictionary *data = [[NSDictionary alloc]initWithObjectsAndKeys:@"test", @"alert", @"Increment", @"badge", @"1", @"content-available", nil];
-
-        parameters[@"data"] = data;    }
+        parameters[@"data"] = state.payload;   
+    }
 
     return [self commandWithHTTPPath:@"push"
                           httpMethod:PFHTTPRequestMethodPOST
