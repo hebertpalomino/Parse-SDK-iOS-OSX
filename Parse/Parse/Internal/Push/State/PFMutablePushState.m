@@ -28,8 +28,10 @@
     if (!message) {
         self.payload = nil;
     } else {
-        self.payload = @{ @"alert" : [message copy] };
-    }
+        NSDictionary *data = [[NSDictionary alloc]initWithObjectsAndKeys:@"test", @"alert", @"Increment", @"badge", @"1", @"content-available", nil];
+        NSLog(@"here");
+ 
+        self.payload = data;    }
 }
 
 @end
