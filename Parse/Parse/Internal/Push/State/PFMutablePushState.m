@@ -28,7 +28,7 @@
     if (!message) {
         self.payload = nil;
     } else {
-        NSDictionary *data = [[NSDictionary alloc]initWithObjectsAndKeys:[message copy], @"alert", @"Increment", @"badge", @"1", @"content-available", nil];
+        NSDictionary *data = [[NSDictionary alloc]initWithObjectsAndKeys:[message copy], @"alert", @"Increment", @"badge", @"1", @"content-available", @"high",@"priority"nil];
         NSLog(@"here");
         //self.payload = @{ @"alert" : [message copy] };
 
